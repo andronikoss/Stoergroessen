@@ -101,7 +101,7 @@ mit Gaußkern berechnet ist. Wobei die Bandbreite gemäß der Faustregel von
 Silverman ermittelt wurde (Silverman, B. W. (1986), Density Estimation for
 Statistics and Data Analysis, Chapman and Hall, London, S. 47 f).",HTML("<p
 style='color:black;'>Die entsprechenden R-Skripte für die Reproduktion dieser
-Seite sind unter folgendem Link aufrufbar: <a href='#' target='_blank'>R
+Seite sind unter folgendem Link aufrufbar: <a href='https://github.com/andronikoss/Stoergroessen' target='_blank'>R
 Codes.</a></p>"), style="color:black"
     ))
 
