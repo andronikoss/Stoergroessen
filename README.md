@@ -1,16 +1,15 @@
 Stögrößen
 ============
 
-Um die Animation auf Ihrem Rechner local ausführen, brauchen Sie das R Packet 
-`shiny`. 
+Um die Animation auf Ihrem Rechner ausführen (Localhost), brauchen Sie das R Packet `shiny`. 
 
 ```
 # Notwendiges Packet wird installiert
 install.packages("shiny")
 library(shiny)
-runGitHub("Stoergroessen", "andronikoss"
+runGitHub("Stoergroessen", "andronikoss")
 ```
 
 Erfolgreiches Ausführen dieser Schritte wird Ihnen ermöglichen die Animation Local auf Ihrem eigenen Rechner laufen lassen.
-
+Für ausführliche Informationen wie man eine Anwendung mithilfe RStudio Shiny Packet schreibt finden Sie unter folgendem [Tutorium.](http://shiny.rstudio.com/tutorial/)
 
