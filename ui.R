@@ -1,32 +1,32 @@
 library(shiny)
 
 shinyUI(fluidPage(withMathJax(),
-    titlePanel(span("Wahrscheinlichkeitsverteilung der Störgrößen",style = "color:white"),
-                windowTitle="Störgrößen"),
+    titlePanel(span("Wahrscheinlichkeitsverteilung der Störgrößen", style = "color:white"),
+                windowTitle = "Störgrößen"),
                   
-    sidebarLayout(position="right",
+    sidebarLayout(position = "right",
         sidebarPanel(
                                 	
         wellPanel(style = "background-color: #FFFFFF;", h5("Bedienfenster"),
         sliderInput('Number.of.Samples', 'Stichproben \\( (S) \\)', 
-                    value=1, min=1,max=1000, step=1,animate=animationOptions(interval=800,
+                    value = 1, min = 1, max = 1000, step = 1, animate = animationOptions(interval = 800,
                     playButton = HTML('<p align="right"><button type="button" class="btn btn-small btn-primary">
                     <span class="icon-play"></span> Start </button></p>'),
                     pauseButton = HTML('<p align="right"><button type="button" class="btn btn-small btn-primary">
                     <span class="icon-pause"></span> Pause </button></p>') )),
                     checkboxInput("checkbox", label = "Wahrscheinlichkeitsverteilung", value = T),
-                    shinysky::actionButton('action', 'Stichprobenerzeugung', styleclass='success'),
+                    shinysky::actionButton('action', 'Stichprobenerzeugung', styleclass = 'success'),
                     downloadButton('downloadPlot', 'Grafik herunterladen')),
     br(),
     br(),
                                     
                                     
-    wellPanel(p(strong("Redaktion"), style='margin-bottom:1px;color:black;'),
+    wellPanel(p(strong("Redaktion"), style = 'margin-bottom:1px;color:black;'),
             HTML("<p style='margin-bottom:1px;color:black;'>Programmierung: Andranik Stepanyan</p>"),
-            p("Text: Ludwig von Auer", style="color:black"),
+            p("Text: Ludwig von Auer", style = "color:black"),
             HTML("<a , style='margin-bottom:1px;color:black;' href = 'https://www.uni-trier.de/index.php?id=50126' target='_blank'>Professur für Finanzwissenschaft</a>"),
             p("Fachbereich IV - Volkswirtschaftslehre", style = 'margin-bottom:1px;color:black;'),
-            p("Universität Trier", style="color:black"),
+            p("Universität Trier", style = "color:black"),
             p(strong("Lehrbuch"), style = 'margin-bottom:1px; color:black;'),
             HTML("<p style = 'color:black;'>Auer, Ludwig <a href = 'https://www.uni-trier.de/index.php?id=15929' target='_blank'><img src='buch.jpg' style='float: right;'></a>von (2013),
                     <a href = 'https://www.uni-trier.de/index.php?id=15929' target='_blank' style='color:black'>Ökonometrie - eine Einführung,<br>
@@ -52,7 +52,7 @@ shinyUI(fluidPage(withMathJax(),
     mainPanel(
             
     wellPanel(wellPanel(style = "background-color: #FFFFFF;",
-                        plotOutput("densityPlot",height = "350px"))),
+                        plotOutput("densityPlot", height = "350px"))),
     wellPanel(style = "background-color: #DEEBF7;",
     tabsetPanel(type = "pills",
             
@@ -61,8 +61,8 @@ p("In der Animation können Sie beobachten, wie für die drei
 abgebildeten Störgrößen in jeder wiederholten Stichprobe immer neue Werte
 erzeugt werden und wie sich bei steigendem Stichprobenumfang die geschätzte
 Wahrscheinlichkeitsverteilung jeder Störgröße der Normalverteilung annährt.",
-	style="color:black") ),
-
+	style = "color:black") ),
+ 
     tabPanel(h5("Was zeigt die Anfangseinstellung?"),
 p("Die Animation greift das Trinkgeld-Beispiel des Lehrbuches
 auf. Für jeden Gast \\( t \\) wird das beobachtete Trinkgeld \\( y_{t} \\)
@@ -73,7 +73,7 @@ x_{2} = 30 \\) und \\( x_{3} = 50 \\). Jeder Gast hat seine eigene Störgröße:
 normalverteilt mit Erwartungswert \\( E(u_{t})=0 \\) und Störgrößenvarianz \\(
 \\sigma^{2} = 2 \\). Die roten senkrechten Striche in den drei Grafiken 
 markieren die Störgrößenwerte der ersten Stichprobe: \\( u_{1} = 0,5 \\), \\(
-u_{2} = -1,1 \\) und \\( u_{3} = 0,3 \\).", style="color:black" )),
+u_{2} = -1,1 \\) und \\( u_{3} = 0,3 \\).", style = "color:black" )),
 
     tabPanel(h5("Benutzungshinweise"), 
 p(HTML("<p style='color:black;'>Wenn Sie im Bedienfenster auf <img src =
@@ -101,8 +101,9 @@ mit Gaußkern berechnet ist. Wobei die Bandbreite gemäß der Faustregel von
 Silverman ermittelt wurde (Silverman, B. W. (1986), Density Estimation for
 Statistics and Data Analysis, Chapman and Hall, London, S. 47 f).",HTML("<p
 style='color:black;'>Die entsprechenden R-Skripte für die Reproduktion dieser
-Seite sind unter folgendem Link aufrufbar: <a href='https://github.com/andronikoss/Stoergroessen' target='_blank'>R
-Codes.</a></p>"), style="color:black"
+Seite sind unter folgendem Link aufrufbar:
+<a href='https://github.com/andronikoss/Stoergroessen' target='_blank'>R
+Codes.</a></p>"), style = "color:black"
     ))
 
     )),
