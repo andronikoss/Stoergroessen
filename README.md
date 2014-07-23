@@ -1,7 +1,7 @@
 Stögrößen
 ============
 
-Um die Animation auf Ihrem Rechner ausführen (Localhost), brauchen Sie das R Packet `shiny`. 
+Um die Animation auf Ihrem Rechner auszuführen (_Localhost_), brauchen Sie das R Packet `shiny`. 
 
 ```
 # Notwendiges Packet wird installiert
